@@ -14,7 +14,7 @@ import com.example.course.repositories.UserRepository;
 @Profile("test")
 public class TestConfig implements CommandLineRunner{
 
-	//Injeção de Dependencia implicita padrão do spring
+	//Injeção de Dependencia padrão do spring
 	@Autowired
 	private UserRepository userRepository;
 
@@ -25,6 +25,5 @@ public class TestConfig implements CommandLineRunner{
 		
 		//Metodo herdade do JPARepository
 		userRepository.saveAll(Arrays.asList(u1, u2));
-		
 	}
 }
